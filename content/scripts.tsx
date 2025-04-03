@@ -1,8 +1,9 @@
 import ReactDOM from 'react-dom/client'
 import ContentApp from './ContentApp'
-import {injectStyles} from './scripts-shell'
+// import {injectStyles} from './scripts-shell'
 // import './styles.css?inline_style'
-import './styles.css?inline_style'
+import './styles.css'
+import LinkedInTLDR from './TldrComponent'
 
 if (document.readyState === 'complete') {
   initial()
@@ -12,7 +13,7 @@ if (document.readyState === 'complete') {
   })
 }
 
-injectStyles()
+// injectStyles()
 
 export default function initial() {
   // Create a new div element and append it to the document's body
@@ -31,7 +32,8 @@ export default function initial() {
   const root = ReactDOM.createRoot(shadowRoot)
   root.render(
     <div className="content_script">
-      <ContentApp />
+      {/* <ContentApp /> */}
+      <LinkedInTLDR />
     </div>
   )
 

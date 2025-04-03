@@ -13,6 +13,14 @@
       "background.ts"
     ]
   },
+  "chromium:permissions": [
+    "tabs",
+    "storage",
+    "scripting",
+    "activeTab",
+    "windows",
+    "notifications"
+  ],
   "content_scripts": [
     {
       "matches": [
