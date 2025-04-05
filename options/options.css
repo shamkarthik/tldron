@@ -1,0 +1,143 @@
+/* Global reset for box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Root page layout */
+.options-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 16px;
+}
+
+/* Main card container */
+.options-container {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  width: 100%;
+  max-width: 480px;
+  box-sizing: border-box;
+}
+
+/* Title */
+.options-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Description and disclaimer */
+.options-description {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.options-warning {
+  color: #b91c1c;
+  font-weight: bold;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+/* External link button */
+.api-button {
+  background-color: #f59e0b;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  margin: 16px 0;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.api-button:hover {
+  background-color: #d97706;
+}
+
+/* Input label */
+.input-label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Input and toggle wrapper */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+/* API key input */
+.api-input {
+  width: 100%;
+  padding: 10px 40px 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  max-width: 100%;
+  background-color: #fff;
+  color: #111;
+}
+
+/* Show/Hide toggle */
+.toggle-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+/* Save and Clear buttons */
+.save-button,
+.clear-button {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 14px;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.save-button {
+  background-color: #2563eb;
+}
+
+.save-button:hover {
+  background-color: #1d4ed8;
+}
+
+.clear-button {
+  background-color: #dc2626;
+}
+
+.clear-button:hover {
+  background-color: #b91c1c;
+}

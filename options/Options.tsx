@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useToast } from "../components/context/ToastContext";
+import "./options.css";
 
 const Options: React.FC = () => {
   const [apiKey, setApiKey] = useState("");
@@ -29,18 +30,35 @@ const Options: React.FC = () => {
     });
   };
 
-  return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-50">
-      <div className="bg-white shadow-xl p-8 rounded-2xl w-full max-w-md">
-        <h1 className="text-2xl font-bold text-gray-800 mb-4">
-          Extension Settings
-        </h1>
+  const openApiKeyPage = () => {
+    window.open("https://aistudio.google.com/apikey", "_blank");
+  };
 
-        <label className="block text-gray-700 mb-2" htmlFor="apiKey">
+  return (
+    <div className="options-page">
+      <div className="options-container">
+        <h1 className="options-title">Extension Settings</h1>
+
+        <div className="options-description">
+          <p>
+            This extension uses your own <strong>Gemini API key</strong> to generate AI summaries.
+            Your key is stored securely in your browser’s local storage.
+          </p>
+          <p className="options-warning">
+            ⚠️ Be cautious: Sharing your API key with third-party tools can be risky. Always review
+            permissions and monitor usage.
+          </p>
+        </div>
+
+        <button className="api-button" onClick={openApiKeyPage}>
+          Get Gemini API Key
+        </button>
+
+        <label className="input-label" htmlFor="apiKey">
           Gemini API Key
         </label>
 
-        <div className="relative">
+        <div className="input-wrapper">
           <input
             id="apiKey"
             type={showKey ? "text" : "password"}
@@ -49,28 +67,17 @@ const Options: React.FC = () => {
             spellCheck={false}
             value={apiKey}
             onChange={(e) => setApiKey(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 pr-10"
+            className="api-input"
           />
-          <button
-            type="button"
-            onClick={() => setShowKey((prev) => !prev)}
-            className="absolute inset-y-0 right-0 px-3 text-sm text-blue-600 hover:underline"
-          >
+          <button type="button" className="toggle-button" onClick={() => setShowKey((prev) => !prev)}>
             {showKey ? "Hide" : "Show"}
           </button>
         </div>
 
-        <button
-          onClick={handleSave}
-          className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg"
-        >
+        <button className="save-button" onClick={handleSave}>
           Save
         </button>
-
-        <button
-          onClick={handleClear}
-          className="mt-2 w-full bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg"
-        >
+        <button className="clear-button" onClick={handleClear}>
           Clear Storage
         </button>
       </div>

@@ -10,7 +10,7 @@
     padding: 0.5rem 1rem;
     background-color: #3b82f6; /* blue-500 */
     color: white;
-    border-radius: 0.25rem; /* rounded */
+    border-radius: 8px;
     transition: background-color 0.2s ease;
   }
   
@@ -31,7 +31,7 @@
   .tldr-summary {
     margin-top: 0.5rem;
     padding: 0.5rem;
-    /* border: 1px solid #ccc; */
-    /* border-radius: 0.25rem; */
   }
+  
+
   

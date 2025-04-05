@@ -44,18 +44,6 @@ const ejectButtons = () => {
 
 const LinkedInTLDR = () => {
   const [enableExtension, setEnableExtension] = useState(false);
-  const [apiKey, setApiKey] = useState<string | null>(null);
-
-  useEffect(() => {
-    const updateKey = (changes: any) => {
-      if (changes.apiKey) {
-        console.log("apiKey", changes.apiKey.newValue);
-        setApiKey(changes.apiKey.newValue);
-      }
-    };
-    chrome.storage.onChanged.addListener(updateKey);
-    return () => chrome.storage.onChanged.removeListener(updateKey);
-  }, []);
 
   useEffect(() => {
     if (!enableExtension) {
@@ -78,17 +66,15 @@ const LinkedInTLDR = () => {
   };
 
   return (
-    <div>
+    <div className="button-wrapper">
       <button
-        className="m-2 p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        className="primary-button"
         onClick={() => setEnableExtension(!enableExtension)}
       >
         {enableExtension ? "Disable Button" : "Enable Button"}
       </button>
-      <button
-        className="m-2 p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-        onClick={openSettings}
-      >
+
+      <button className="primary-button" onClick={openSettings}>
         Open Settings
       </button>
     </div>
