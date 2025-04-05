@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./TldrComponent.css";
 import InjectButton from "./InjectButton";
 import { ToastProvider } from "../components/context/ToastContext";
+import PromotedPostManager from "./PromotedPostManager";
 
 const injectButtons = () => {
   const containers = Array.from(
@@ -77,6 +78,7 @@ const LinkedInTLDR = () => {
       <button className="primary-button" onClick={openSettings}>
         Open Settings
       </button>
+      <PromotedPostManager/>
     </div>
   );
 };
