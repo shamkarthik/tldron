@@ -1,17 +1,12 @@
 import ReactDOM from 'react-dom/client'
-import ContentApp from './ContentApp'
+// import ContentApp from './ContentApp'
 // import {injectStyles} from './scripts-shell'
-// import './styles.css?inline_style'
-import './styles.css'
+import './styles.css?inline_style'
+// import tailwindCss from './styles.css?inline_style'
+// import './styles.css'
 import LinkedInTLDR from './TldrComponent'
 
-if (document.readyState === 'complete') {
-  initial()
-} else {
-  document.addEventListener('readystatechange', () => {
-    if (document.readyState === 'complete') initial()
-  })
-}
+
 
 // injectStyles()
 
@@ -20,6 +15,7 @@ export default function initial() {
   const rootDiv = document.createElement('div')
   rootDiv.id = 'extension-root'
   document.body.appendChild(rootDiv)
+  
 
   // Injecting content_scripts inside a shadow dom
   // prevents conflicts with the host page's styles.
@@ -41,4 +37,12 @@ export default function initial() {
     root.unmount()
     // shadowRoot.remove()
   }
+}
+
+if (document.readyState === 'complete') {
+  initial()
+} else {
+  document.addEventListener('readystatechange', () => {
+    if (document.readyState === 'complete') initial()
+  })
 }

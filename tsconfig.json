@@ -15,7 +15,8 @@
     "target": "esnext",
     "verbatimModuleSyntax": true,
     "useDefineForClassFields": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["node"]
   },
   "include": ["./", "extension-env.d.ts"],
   "exclude": ["node_modules", "dist"]

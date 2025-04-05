@@ -1,0 +1,37 @@
+.tldr-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0.5rem;
+  }
+  
+  .tldr-button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #3b82f6; /* blue-500 */
+    color: white;
+    border-radius: 0.25rem; /* rounded */
+    transition: background-color 0.2s ease;
+  }
+  
+  .tldr-button:hover {
+    background-color: #2563eb; /* blue-600 */
+  }
+  
+  .tldr-button:disabled {
+    background-color: #9ca3af; /* gray-400 */
+    cursor: not-allowed;
+  }
+  
+  .tldr-button-loading {
+    background-color: #9ca3af; /* gray-400 */
+    cursor: progress;
+  }
+  
+  .tldr-summary {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    /* border: 1px solid #ccc; */
+    /* border-radius: 0.25rem; */
+  }
+  
