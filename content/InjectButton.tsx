@@ -74,7 +74,7 @@ const InjectButton = ({ container }: { container: HTMLElement }) => {
                 className={`tldr-button ${loading ? 'tldr-button-loading' : ''}`}
                 disabled={loading}
             >
-                {loading ? "Generating TL;DR..." : "Generate TL;DR"}
+                {loading ? "TL;DR..." : "TL;DR"}
             </button>
             {summary && (
                 <p className="tldr-summary">{summary}</p>

@@ -24,7 +24,7 @@
   "content_scripts": [
     {
       "matches": [
-        "<all_urls>"
+        "https://www.linkedin.com/*"
       ],
       "js": [
         "./content/scripts.tsx"
