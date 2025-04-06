@@ -24,6 +24,6 @@
   "scripts": {
     "dev": "extension dev",
     "start": "extension start",
-    "build": "extension build"
+    "build": "extension build --browser=chrome --zip --zip-filename=TLDRON-Extension.zip"
   }
 }
