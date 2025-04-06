@@ -2,8 +2,8 @@
   "$schema": "https://json.schemastore.org/chrome-manifest.json",
   "manifest_version": 3,
   "version": "0.0.1",
-  "name": "linkedin-tldr",
-  "description": "An Extension.js example.",
+  "name": "TLDRON",
+  "description": "LinkedIn Accelerator Extension",
   "icons": {
     "48": "images/extension_48.png"
   },
@@ -35,5 +35,5 @@
     "page": "options/index.html",
     "open_in_tab": true
   },
-  "author": "Your Name"
+  "author": "Sham Karthik S"
 }
