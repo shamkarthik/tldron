@@ -4,6 +4,10 @@
 
 TLDRON is a browser extension designed to enhance your LinkedIn experience. It provides concise summaries of LinkedIn content, saving you time and helping you quickly grasp the main points of posts and articles. Additionally, it offers the ability to disable promoted content, allowing for a cleaner and more focused browsing experience.
 
+## Preview
+
+![tldron preview](https://github.com/user-attachments/assets/adb93133-03a6-41a3-877a-a81303bad5e5)
+
 ## Features
 
 *   **AI-Powered Summarization:** TLDRON uses the Gemini API to generate intelligent and accurate summaries of LinkedIn posts and articles.
