@@ -26,6 +26,16 @@ TLDRON leverages the power of the Gemini API to analyze the text content of Link
 
 TLDRON identifies and hides sponsored posts and ads within your LinkedIn feed. This feature helps you focus on organic content and reduces distractions.
 
+### API Key Storage
+
+TLDRON requires a Gemini API key to function. This key is stored securely within your browser's local storage using the `chrome.storage.local` API.
+
+**Important Security Notes:**
+
+*   **Obfuscation, Not Encryption:** While `chrome.storage.local` provides a degree of protection, it's important to understand that the data is obfuscated, not truly encrypted. This means that while it's not easily human-readable, it's not protected by strong cryptographic methods.
+*   **User Responsibility:** The security of your API key ultimately depends on the security of your machine. If your system is compromised, any data stored locally could be at risk.
+*   **Never commit your API key to version control.** This is a critical security practice. Ensure your API key is not accidentally pushed to a public repository.
+
 ## Getting Started
 
 ### Installation
