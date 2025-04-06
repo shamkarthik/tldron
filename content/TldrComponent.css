@@ -4,7 +4,11 @@
     align-items: flex-start;
     margin: 0.5rem;
   }
-  
+  .tldr-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust spacing as needed */
+  }
   .tldr-button {
     margin: 0.5rem;
     padding: 0.5rem 1rem;
