@@ -30,14 +30,11 @@ const styles: Record<string, React.CSSProperties> = {
     display: "flex",
     alignItems: "center",
     gap: "4px",
-    backgroundColor: "#3b82f6",
-    // border: "none",
-    // padding: "10px 16px",
-    // borderRadius: "8px",
-    fontSize: "14px",
-    // cursor: "pointer",
-    // transition: "background-color 0.2s ease-in-out",
+    backgroundColor: "#3b82f6",    
+    fontSize: "14px",    
   },
+  buttonHover: { backgroundColor: '#2563eb' },
+  
   leftRounded: {
     borderTopLeftRadius: "8px",
     borderBottomLeftRadius: "8px",
@@ -47,7 +44,7 @@ const styles: Record<string, React.CSSProperties> = {
     borderBottomRightRadius: "8px",
   },
   popup: {
-    position: "fixed",
+    // position: "fixed",
     backgroundColor: "#3b82f6",
     padding: "12px 16px",
     borderRadius: "8px",
@@ -56,6 +53,7 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: "14px",
     whiteSpace: "nowrap",
     color: "#fff",
+    marginTop: "8px",
   },
 };
 
@@ -66,7 +64,7 @@ const PromotedPostManager: React.FC = () => {
   const [nonPromotedCount, setNonPromotedCount] = useState(0);
   const [popupPos, setPopupPos] = useState({ top: 0, left: 0 });
 
-  const removedIdsRef = useRef<Set<string>>(new Set());
+  const removedIdsRef = useRef<Set<string>>(new Set<string>());
   const groupRef = useRef<HTMLDivElement>(null);
 
   const updateCounts = () => {
@@ -135,16 +133,17 @@ const PromotedPostManager: React.FC = () => {
 
   return (
     <div>
-      <div style={styles.group} ref={groupRef}>
+      <div className="group" ref={groupRef}>
         <button
-          style={{ ...styles.button, ...styles.leftRounded }}
+         className="button left-rounded"
+
           onClick={() => setIsHiding((prev) => !prev)}
         >
           {isHiding ? "Show Promoted" : "Hide Promoted"}
         </button>
 
         <button
-          style={{ ...styles.button, ...styles.rightRounded }}
+          className="button right-rounded"
           onClick={toggleStatsPopup}
         >
           ⓘ
@@ -153,11 +152,8 @@ const PromotedPostManager: React.FC = () => {
 
       {showStats && (
         <div
-          style={{
-            ...styles.popup,
-            top: popupPos.top,
-            left: popupPos.left,
-          }}
+        className="popup"
+        // style={{ top: popupPos.top, left: popupPos.left, position: "fixed" }}
         >
           <div>🔍 Promoted Posts: {promotedCount}</div>
           <div>📰 Organic Posts: {nonPromotedCount}</div>
