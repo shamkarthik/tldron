@@ -14,12 +14,8 @@
     ]
   },
   "chromium:permissions": [
-    "tabs",
-    "storage",
     "scripting",
-    "activeTab",
-    "windows",
-    "notifications"
+    "storage"
   ],
   "content_scripts": [
     {
