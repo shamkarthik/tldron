@@ -58,3 +58,10 @@ In the project directory, you can run the following scripts:
 
 ```bash
 npm dev
+```
+
+## Credits
+
+This extension uses icons from Flaticon:
+
+*   [Sport team icons created by Mehwish - Flaticon](https://www.flaticon.com/free-icons/sport-team)
