@@ -17,7 +17,6 @@
     ]
   },
   "chromium:permissions": [
-    "scripting",
     "storage"
   ],
   "content_scripts": [
