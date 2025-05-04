@@ -1,0 +1,56 @@
+Privacy Policy for TLDRon
+Last Updated: 04-05-2025
+
+Thank you for using TLDRon. This privacy policy explains how your data is handled when you use the extension.
+
+1. What TLDRon Does
+TLDRon helps you read LinkedIn posts more efficiently by injecting AI-generated TL;DR summaries. To generate these summaries, TLDRon extracts post content from the LinkedIn feed and sends it to Google’s Gemini API.
+
+2. Data Collected and Used
+TLDRon does not collect, store, or transmit any personally identifiable information (PII).
+
+However, the following operations occur locally in your browser:
+
+Post Content Sent to Gemini API
+
+Only the visible text content of LinkedIn posts is sent to the Gemini API for summarization.
+
+This is done solely for providing the TL;DR summary.
+
+No user identifiers, cookies, or session data are sent.
+
+Gemini API Key Storage
+
+Your Gemini API key is stored in your browser’s local storage as plain text.
+
+This storage is not encrypted. You are responsible for keeping your API key private.
+
+The key is only used locally by the extension to send summarization requests.
+
+3. No Server-Side Data Handling
+TLDRon does not use any backend server.
+
+No data is stored or processed outside your local browser environment, except for the call to Gemini API.
+
+4. Third-Party Services
+Gemini API (by Google) is used to generate summaries.
+
+TLDRon sends only post content (not user data) for summarization.
+
+Use of Gemini is subject to Google's Privacy Policy.
+
+5. Your Control
+You may clear the stored API key at any time from the extension’s settings.
+
+You may disable or uninstall the extension at any time via Chrome settings.
+
+6. Security Note
+While the API key is never shared with anyone by TLDRon, it is stored in plain text in browser storage. If others have access to your browser profile, they may be able to view your API key.
+
+7. Changes to This Policy
+We may update this policy to reflect changes to the extension’s functionality or data handling. Updates will be reflected here and in the Chrome Web Store listing.
+
+8. Contact
+Developer: Sham Karthik
+Email: shamkarthik88@gmail.com
+GitHub: https://github.com/shamkarthik/tldron
