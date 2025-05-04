@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Privacy Policy – TLDRon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      white-space: pre-wrap;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy</h1>
+  <div id="policy">Loading privacy policy...</div>
+
+  <script>
+    fetch('./privacy.txt')
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load privacy.txt');
+        return res.text();
+      })
+      .then(text => {
+        document.getElementById('policy').textContent = text;
+      })
+      .catch(err => {
+        document.getElementById('policy').textContent = "Could not load the privacy policy.";
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
